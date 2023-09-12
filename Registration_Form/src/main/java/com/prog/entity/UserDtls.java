@@ -1,17 +1,17 @@
 package com.prog.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "USER_DTLS")
 public class UserDtls {
 	
-@Id	 //for do id as primary key
+@Id //for do id as primary key
 @GeneratedValue(strategy = GenerationType.AUTO)  //for auto increment
 private int id;
 @Column(name ="Name")
@@ -19,6 +19,7 @@ private String fullname;
 private String gender;
 private String dob;
 private String address;
+private String pincode;
 private String email;
 private String password;
 private String role;
@@ -71,11 +72,36 @@ public String getPassword() {
 public void setPassword(String password) {
 	this.password = password;
 }
+public UserDtls(int id, String fullname, String gender, String dob, String address, String email, String password,
+		String role) {
+	super();
+	this.id = id;
+	this.fullname = fullname;
+	this.gender = gender;
+	this.dob = dob;
+	this.address = address;
+	this.email = email;
+	this.password = password;
+	this.role = role;
+}
+public UserDtls() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+
 @Override
 public String toString() {
 	return "UserDtls [id=" + id + ", fullname=" + fullname + ", gender=" + gender + ", dob=" + dob + ", address="
-			+ address + ", email=" + email + ", password=" + password + "]";
+			+ address + ", pincode=" + pincode + ", email=" + email + ", password=" + password + ", role=" + role + "]";
 }
+public String getPincode() {
+	return pincode;
+}
+public void setPincode(String pincode) {
+	this.pincode = pincode;
+}
+
 
 
 

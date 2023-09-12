@@ -2,10 +2,11 @@ package com.prog.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 
 @Entity
@@ -20,6 +21,7 @@ private int id;
 	private String picture;
 	private String location;
 	private Long price;
+	private String landmark;
 	private String description;
 	public int getId() {
 		return id;
@@ -73,7 +75,13 @@ private int id;
 	@Override
 	public String toString() {
 		return "Property [id=" + id + ", name=" + name + ", picture=" + picture + ", location=" + location + ", price="
-				+ price + ", description=" + description + "]";
+				+ price + ", landmark=" + landmark + ", description=" + description + "]";
+	}
+	public String getLandmark() {
+		return landmark;
+	}
+	public void setLandmark(String landmark) {
+		this.landmark = landmark;
 	}
 	
 }

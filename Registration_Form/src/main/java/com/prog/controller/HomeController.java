@@ -52,6 +52,11 @@ public class HomeController {
 	    model.addAttribute("users", pprepo.findAll());
 	    return "viewproperty";
 	}
+	@GetMapping("/UpdateProperty")
+	public String updateProperty(Model model) {
+	    model.addAttribute("users", pprepo.findAll());
+	    return "UpdateProperty";
+	}
 	
 	
 }

@@ -11,7 +11,7 @@
 
     <title></title>
   </head>
-  <body style="background-color:white;">
+  <body style="background-color:#fffafa;">
     
     
 <!-- NAV BAR START -->
@@ -24,7 +24,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+        <a class="nav-link" href="home"><b>DREAM HOME</b>
         <span class="sr-only">(current)</span></a>
       </li>
     
@@ -32,7 +32,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
      
-      <a th:href="@{/logout}" class="btn btn-light my-2 my-sm-0" type="submit">Logout</a>
+      <a th:href="@{/logout}" class="btn btn-light my-2 my-sm-0" type="submit" style="background-color: red; border-radius: 20px; border-color:#8b0000	; ">Logout</a>
     </form>
   </div>
 </nav>
@@ -43,16 +43,15 @@
 
 
 <div class="container p-2">
+<h1>Property Details</h1> 
   <div class="row">
-   <div class="col-md-6 offset-md-3">
-    <div class="card">
-     <div class="card-body">
-         <h1>Property Details</h1>  
+  
+        
          
      <div th:switch="${users}">
     <h2 th:case="null">No users yet!</h2>
         <div th:case="*">
-            <h2>Users</h2>
+          
             <table style="border:  2px solid black">
                 <thead>
                     <tr style="border:  2px solid black">
@@ -61,6 +60,7 @@
                         <th style="border:  2px solid black">location</th>
                         <th style="border:  2px solid black">price</th>
                         <th style="border:  2px solid black">description</th>
+                       
                     </tr>
                 </thead>
                 <tbody>

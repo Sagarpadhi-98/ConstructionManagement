@@ -10,7 +10,7 @@
 
     <title>User Login</title>
   </head>
-  <body style="background-color:gray;">
+  <body style="background-color:rgb(255, 255, 255);">
     
     
 <!-- NAV BAR START -->
@@ -29,8 +29,7 @@
     
     </ul>
     <form class="form-inline my-2 my-lg-0">
-     
-      <a href="login" class="btn btn-light my-2 my-sm-0 mr-1" type="submit">Login</a>
+    
       <a href="signup" class="btn btn-light my-2 my-sm-0" type="submit">Sign up</a>
     </form>
   </div>
@@ -42,19 +41,19 @@
 <div class="container p-2">
   <div class="row">
    <div class="col-md-6 offset-md-3">
-    <div class="card">
+    <div class="card" style="background-color: #f8f8ff;">
      <div class="card-body">
-     <h3 class="text-center">Login Form</h3>
+     <h3 class="text-center" style="color:#0000ff;">Login Form</h3>
      
      <!--alert message  -->
 
      
-     <div th:if="${param.logout}">
-              <h5 class="text-center text-success">Logout successfully</h5>
+     <div th:if="${param.logout}" >
+              <h5 class="text-center text-success" >Logout successfully</h5>
          </div>
          
          <div th:if="${param.error}">
-              <h5 class="text-danger text-success">Invalid User Name and password</h5>
+              <h5 class="text-danger text-success" style="color: rgb(0, 0, 255);">Invalid User Name and password !!!</h5>
          </div>  
          
      
@@ -74,8 +73,8 @@
        type="password" class="form-control" id="exampleInputPassword1" 
        placeholder="Password" name="password">
        
- </div>
-  <button type="submit" class="btn btn-primary">Login</button>
+ </div >
+  <button type="submit" class="btn btn-primary" style="background-color: rgb(0, 0, 255);">Login</button>
         </form> 
         
         

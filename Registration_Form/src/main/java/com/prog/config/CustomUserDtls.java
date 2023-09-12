@@ -3,6 +3,7 @@ package com.prog.config;
 import java.util.Collection;
 import java.util.HashSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.prog.entity.UserDtls;
 
 public class CustomUserDtls implements UserDetails  {
+	
+	@Autowired
 	private UserDtls u;
 
 	
